@@ -15,7 +15,8 @@
   "author": "Jeremy Rue",
   "license": "MIT",
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "gh-pages": "^2.2.0",
+    "grunt": "^1.1.0",
     "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-watch": "^1.1.0"
   }

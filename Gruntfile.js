@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       }
     },
 
-    //make a webserver on the dist folder
+    //make a webserver on the src folder
     connect: {
       server: {
         options: {
@@ -39,6 +39,14 @@ module.exports = function(grunt) {
     }
 
 
+  });
+
+  var ghpages = require('gh-pages');
+
+  grunt.registerTask('publish', 'Publish project to gh-pages', ()=>{
+    ghpages.publish('src',  {push: true}, function(err){
+      grunt.log.writeln(err);
+    });
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
